@@ -1,0 +1,3 @@
+user: admin
+email: thaque20@gmail.com
+password: admin
