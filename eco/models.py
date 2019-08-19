@@ -3,6 +3,19 @@ from django.db import models
 # Create your models here.
 from django.template.defaulttags import now
 
+class Sensor(models.Model):
+    name = models.CharField(max_length=200, default=None, blank=True, null=True)
+    brand = models.CharField(max_length=200, default=None, blank=True, null=True)
+    model = models.CharField(max_length=200, default=None, blank=True, null=True)
+    description =  models.TextField(default=None, blank=True, null=True)
+
+class Device(models.Model):
+    model =  models.CharField(max_length=200, default=None, blank=True, null=True)
+    image =  models.CharField(max_length=200, default=None, blank=True, null=True)
+    type = models.CharField(max_length=200, default=None, blank=True, null=True)
+    sensors = models.CharField(max_length=200, default=None, blank=True, null=True)
+    remarks =  models.TextField(default=None, blank=True, null=True)
+
 
 class Plant(models.Model):
     name = models.CharField(max_length=200, default=None, blank=True, null=True)

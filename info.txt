@@ -1,3 +1,7 @@
 user: admin
 email: thaque20@gmail.com
 password: admin
+
+// Heroku
+user: developer
+password: developer123
