@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register('datalogs', views.DatalogView)
 router.register('plants', views.PlantView)
 urlpatterns = [
+    path('', views.index, name='index'),
     path('api/', include(router.urls))
 ]
