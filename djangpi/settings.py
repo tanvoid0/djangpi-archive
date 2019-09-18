@@ -27,15 +27,17 @@ SECRET_KEY = '7^q$dwk0-@vf+8yi(jk2&6*qozex&h-^6#$yvw#ba7#_6w6@5c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['djangpi.herokuapp.com ', 'localhost']
-
+# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['djangpi.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
     'eco',
+    'resume',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
