@@ -1,4 +1,4 @@
-#!d:\github\django\djangpi\eb-virt\scripts\python.exe
+#!D:\Github\django\djangpi\eb-virt\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
