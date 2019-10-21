@@ -42,6 +42,7 @@ class Datalog(models.Model):
     soil = models.CharField(max_length=200, default=None, blank=True, null=True)
     moisture = models.FloatField(default=None, blank=True, null=True)
     remarks = models.TextField(default=None, blank=True, null=True)
+    alive = models.BooleanField(default=True, blank=True, null=True)
 
     environment = models.BooleanField(default=None, blank=True, null=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True, editable=False)
