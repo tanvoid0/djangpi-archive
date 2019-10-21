@@ -35,7 +35,7 @@ class Plant(models.Model):
 
 
 class Datalog(models.Model):
-    plant = models.ForeignKey(Plant, on_delete=models.CASCADE, default=1)
+    plant = models.ForeignKey(Plant, on_delete=models.CASCADE, default=1, blank=True, null=True)
     light = models.FloatField(default=None, blank=True, null=True)
     temperature = models.FloatField(default=None, blank=True, null=True)
     humidity = models.FloatField(default=None, blank=True, null=True)
