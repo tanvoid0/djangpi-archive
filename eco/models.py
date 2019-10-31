@@ -35,14 +35,14 @@ class Plant(models.Model):
 
 
 class Datalog(models.Model):
-    plant = models.ForeignKey(Plant, on_delete=models.CASCADE, default=1, blank=True, null=True)
+    plant = models.ForeignKey(Plant, on_delete=models.CASCADE, default=1)
     light = models.FloatField(default=None, blank=True, null=True)
     temperature = models.FloatField(default=None, blank=True, null=True)
     humidity = models.FloatField(default=None, blank=True, null=True)
     soil = models.CharField(max_length=200, default=None, blank=True, null=True)
     moisture = models.FloatField(default=None, blank=True, null=True)
     remarks = models.TextField(default=None, blank=True, null=True)
-    alive = models.BooleanField(default=True, blank=True, null=True)
+    alive = models.PositiveSmallIntegerField(default=None, blank=True, null=True)
 
     environment = models.BooleanField(default=None, blank=True, null=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True, editable=False)
