@@ -30,9 +30,16 @@ def range(request):
     # uri.replace('range')
     # return HttpResponse(uri)
     # url = "http://"+request.get_host()+"/api/datalogs/"
-    url = request.GET['url']
+    if request.GET.get('url'):
+        url = request.GET.get('url')
+    else:
+        return HttpResponse(json.dumps(
+            {
+                'msg': 'Wrong URL',
+                'response': 400
+            }
+        ))
     datalogs = requests.get(url=url).json()
-
     data_frame = pd.DataFrame(datalogs, columns=['id', 'light', 'temperature', 'humidity', 'soil', 'moisture', 'alive'])
     # return render_template("index.html", data=data_frame)
     data_frame_filter = data_frame.query('alive!=0')
